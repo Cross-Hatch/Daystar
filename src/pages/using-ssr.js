@@ -53,3 +53,8 @@ export async function getServerData() {
     }
   }
 }
+
+// Define the props that are passed to the component
+UsingSSR.propTypes = {
+  serverData: PropTypes.object.isRequired,
+}
