@@ -12,10 +12,11 @@ export const HeaderContainer = styled.header`
   height: 4em;
   border-radius: 0 0 20px 20px;
   background-color: yellow;
+  filter: ${(props) => props.theme.shadow};
 `
 
 export const LogoImg = styled(GatsbyImage)`
-    width: auto;
+  width: auto;
   min-width: 50px;
 `
 
