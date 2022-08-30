@@ -1,5 +1,5 @@
-import { GatsbyImage } from "gatsby-plugin-image";
-import styled from "styled-components";
+import { GatsbyImage } from "gatsby-plugin-image"
+import styled from "styled-components"
 
 export const HeaderContainer = styled.header`
   display: flex;
@@ -17,6 +17,8 @@ export const HeaderContainer = styled.header`
 export const LogoImg = styled(GatsbyImage)`
     width: auto;
   min-width: 50px;
+`
+
 export const NavItems = styled.ul`
   display: flex;
   justify-content: space-between;
