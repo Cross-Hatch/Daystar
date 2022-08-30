@@ -16,4 +16,23 @@ export const HeaderContainer = styled.header`
 
 export const LogoImg = styled(GatsbyImage)`
     width: auto;
+export const NavItems = styled.ul`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+
+  a {
+    margin-right: auto;
+    padding: 0.3em 0;
+    color: black;
+
+    &:active {
+      color: black;
+    }
+  }
+
+  a.is-active {
+    border-bottom: 2px solid black;
+  }
 `
