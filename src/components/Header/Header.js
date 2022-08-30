@@ -1,10 +1,12 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
+import { HeaderContainer, LogoImg } from "./Header.style"
+import useHeaderQuery from "../../hooks/useHeaderQuery"
 import NavLink from "../NavLink/NavLink"
 import { NavItems } from "./Header.style"
 
-const Header = ({siteTitle}) => {
+  const { wpMediaItem } = useHeaderQuery()
   return ( 
     <HeaderContainer>
       <Link to="/">
