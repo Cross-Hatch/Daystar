@@ -6,8 +6,10 @@ import useHeaderQuery from "../../hooks/useHeaderQuery"
 import NavLink from "../NavLink/NavLink"
 import { NavItems } from "./Header.style"
 
+const Header = ({ siteTitle }) => {
   const { wpMediaItem } = useHeaderQuery()
-  return ( 
+
+  return (
     <HeaderContainer>
       <Link to="/">
         {wpMediaItem ? (
@@ -34,7 +36,7 @@ import { NavItems } from "./Header.style"
         </NavLink>
       </NavItems>
     </HeaderContainer>
-   );
+  )
 }
 
 Header.propTypes = {
