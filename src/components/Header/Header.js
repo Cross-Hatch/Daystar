@@ -7,7 +7,16 @@ import useHeaderQuery from "../../hooks/useHeaderQuery";
 const Header = ({siteTitle}) => {
   return ( 
     <HeaderContainer>
-      {siteTitle}
+      <Link to="/">
+        {wpMediaItem ? (
+          <LogoImg
+            image={wpMediaItem.localFile.childImageSharp.gatsbyImageData}
+            alt={wpMediaItem.altText}
+          />
+        ) : (
+          siteTitle
+        )}
+      </Link>
     </HeaderContainer>
    );
 }
