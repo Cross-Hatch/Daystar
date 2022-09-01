@@ -2,17 +2,25 @@ import * as React from "react"
 
 import Layout from "../components/Layout/Layout"
 import Seo from "../components/SEO/seo"
-import { Wrapper } from "../Styles/index.styles"
+import { Wrapper, PageWrapper } from "../styles/index.styles"
 // import ProductCard from "../components/ProductCard/ProductCard.js"
+import { StaticImage } from "gatsby-plugin-image"
 
 const IndexPage = () => (
-  <Wrapper>
+  <PageWrapper>
+    <Seo title="Home" />
     <Layout>
-      <Seo title="Home" />
-      {/* <ProductCard data={{title: "ginger lime", description: "ginger lemon drink"}} /> */}
-      Index
+      <Wrapper>
+        //background lines
+        <StaticImage
+          src="../images/lines.svg"
+          alt="bg"
+          imgClassName="bg-lines"
+          className="wrapper"
+        />
+      </Wrapper>
     </Layout>
-  </Wrapper>
+  </PageWrapper>
 )
 
 export const Head = () => <Seo title="Home" />
