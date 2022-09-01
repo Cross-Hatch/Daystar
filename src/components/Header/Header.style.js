@@ -12,7 +12,10 @@ export const HeaderContainer = styled.header`
   height: 4em;
   border-radius: 0 0 20px 20px;
   background-color: yellow;
-  filter: ${(props) => props.theme.shadow};
+  filter: ${props => props.theme.shadow};
+  position: absolute;
+  inset: 0 auto auto 0;
+  z-index: 10;
 `
 
 export const LogoImg = styled(GatsbyImage)`
