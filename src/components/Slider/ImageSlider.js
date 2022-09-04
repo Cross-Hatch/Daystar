@@ -14,7 +14,6 @@ const ImageSlider = ({ slides }) => {
     console.log(slides[current], current)
     setCurrent(() => (current === length - 1 ? 0 : current + 1))
     setlabel(() => (label === "Ginger" ? "Apple" : "Ginger"))
-    // slides[current].isActive(current)
   }
 
   const prevslide = () => {
@@ -32,6 +31,7 @@ const ImageSlider = ({ slides }) => {
     <ImageSliderContainer>
       <FaChevronLeft className="left-arrow" onClick={prevslide} />
       <FaChevronRight className="right-arrow" onClick={nextslide} />
+
       <div className="product-label">{label}</div>
 
       {slides.map((slide, index) => {
