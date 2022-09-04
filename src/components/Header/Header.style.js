@@ -11,7 +11,7 @@ export const HeaderContainer = styled.header`
   margin: 0 0 1em 0;
   height: 4em;
   border-radius: 0 0 20px 20px;
-  background-color: yellow;
+  background-color: ${props => props.theme.bg};
   filter: ${props => props.theme.shadow};
   position: absolute;
   inset: 0 auto auto 0;
