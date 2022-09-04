@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from "styled-components"
 
 export const GlobalStyle = createGlobalStyle`
 /*!
@@ -32,7 +32,7 @@ dd {
 }
 h1 {
   font-weight: bold !important;
-  /* color: ${(props) => props.theme.light}; */
+  /* color: ${props => props.theme.light}; */
 }
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
 ul[role="list"],
@@ -50,22 +50,22 @@ body {
   text-rendering: optimizeSpeed;
   line-height: 1.5;
   /* My reset */
-  /* color: ${(props) => props.theme.light};
-  background-color: ${(props) => props.theme.dark000}; */
+  /* color: ${props => props.theme.light};
+  background-color: ${props => props.theme.dark000}; */
 }
 /* A elements that don't have a class get default styles */
 a {
   text-decoration: none;
-  /* color: ${(props) => props.theme.light}; */
+  /* color: ${props => props.theme.light}; */
 }
 
 * .active-link {
-  /* color: ${(props) => props.theme.light}; */
+  /* color: ${props => props.theme.light}; */
 }
 
 a:not([class]) {
   text-decoration-skip-ink: auto;
-  /* color: ${(props) => props.theme.light}; */
+  /* color: ${props => props.theme.light}; */
   text-decoration: none;
 }
 /* Make images easier to work with */
@@ -95,4 +95,4 @@ select {
     scroll-behavior: auto !important;
   }
 }
-`;
+`
