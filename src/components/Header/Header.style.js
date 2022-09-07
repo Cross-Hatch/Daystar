@@ -1,15 +1,45 @@
-import { GatsbyImage } from "gatsby-plugin-image";
-import styled from "styled-components";
+import { GatsbyImage } from "gatsby-plugin-image"
+import styled from "styled-components"
 
 export const HeaderContainer = styled.header`
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  padding: 1em 2em;
+  padding-block: 1.2em;
+  padding-inline: clamp(2em, 5em, 500em);
   min-width: 100%;
-  height: 3em;
+  margin: 0 0 1em 0;
+  height: 4em;
+  border-radius: 0 0 20px 20px;
+  background-color: ${props => props.theme.bg};
+  filter: ${props => props.theme.shadow};
+  position: absolute;
+  inset: 0 auto auto 0;
+  z-index: 10;
 `
 
 export const LogoImg = styled(GatsbyImage)`
-    width: auto;
+  width: auto;
+  min-width: 50px;
+`
+
+export const NavItems = styled.ul`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+
+  a {
+    margin-right: auto;
+    padding: 0.3em 0;
+    color: black;
+
+    &:active {
+      color: black;
+    }
+  }
+
+  a.is-active {
+    border-bottom: 2px solid black;
+  }
 `
