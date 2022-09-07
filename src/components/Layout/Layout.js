@@ -5,9 +5,9 @@ import Header from "../Header/Header"
 import Footer from "../Footer/Footer"
 import { GlobalStyle } from "../GlobalStyles"
 import { ThemeProvider } from "styled-components"
-import { defaultTheme } from "../ThemeProvider"
+// import { defaultTheme, redTheme } from "../ThemeProvider"
 
-const Layout = ({ children }) => {
+const Layout = ({ children, theme }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -19,10 +19,10 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <ThemeProvider theme={defaultTheme}>
+    <ThemeProvider theme={theme}>
       <GlobalStyle />
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <main>{children}</main>
+      {children}
       <Footer />
     </ThemeProvider>
   )
@@ -30,6 +30,7 @@ const Layout = ({ children }) => {
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
+  theme: PropTypes.object,
 }
 
 export default Layout
