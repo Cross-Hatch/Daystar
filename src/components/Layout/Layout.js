@@ -5,7 +5,7 @@ import Header from "../Header/Header"
 import Footer from "../Footer/Footer"
 import { GlobalStyle } from "../GlobalStyles"
 import { ThemeProvider } from "styled-components"
-// import { defaultTheme, redTheme } from "../ThemeProvider"
+import { defaultTheme } from "../ThemeProvider"
 
 const Layout = ({ children, theme }) => {
   const data = useStaticQuery(graphql`
@@ -19,7 +19,7 @@ const Layout = ({ children, theme }) => {
   `)
 
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={theme ? theme : defaultTheme}>
       <GlobalStyle />
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
       {children}
