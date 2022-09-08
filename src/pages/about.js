@@ -1,6 +1,6 @@
 import * as React from "react"
 import Layout from "../components/Layout/Layout"
-import { Wrapper } from "../styles/about.styles"
+import { Wrapper } from "../styles/About.styles"
 // import { defaultTheme } from "../components/ThemeProvider"
 
 const AboutPage = () => {
