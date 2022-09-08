@@ -5,6 +5,7 @@ import { HeaderContainer, LogoImg } from "./Header.style"
 import useHeaderQuery from "../../hooks/useHeaderQuery"
 import NavLink from "../NavLink/NavLink"
 import { NavItems } from "./Header.style"
+import { StaticImage } from "gatsby-plugin-image"
 
 const Header = ({ siteTitle }) => {
   const { wpMediaItem } = useHeaderQuery()
@@ -18,7 +19,7 @@ const Header = ({ siteTitle }) => {
             alt={wpMediaItem.altText}
           />
         ) : (
-          siteTitle
+          <StaticImage width={100} src="../../images/daystar.png" />
         )}
       </Link>
       <NavItems>
