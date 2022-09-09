@@ -7,6 +7,7 @@ import { GlobalStyle } from "../GlobalStyles"
 import { ThemeProvider } from "styled-components"
 import { defaultTheme } from "../ThemeProvider"
 
+
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
