@@ -24,6 +24,10 @@ export const ImageView = styled.div`
     display:flex;
     flex-direction:column;
     justify-content:center;
+ img{
+    width:70%;
+ }
+
 
     
 `

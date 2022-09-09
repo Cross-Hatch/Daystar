@@ -24,10 +24,10 @@ const FormSignup = (props) => {
             type='text'
             name='FirstName'
             placeholder=' FIRST NAME'
-            value={values.username}
+            value={values.FirstName}
             onChange={handleChange}
           />
-          {errors.username && <p>{errors.username}</p>}
+          {/* {errors.username && <p>{errors.username}</p>} */}
         </div>
         <div className='form-inputs'>
          
@@ -36,10 +36,10 @@ const FormSignup = (props) => {
             type='text'
             name='lastname'
             placeholder=' LAST NAME'
-            value={values.username}
+            value={values.lastname}
             onChange={handleChange}
           />
-          {errors.username && <p>{errors.username}</p>}
+          {/* {errors.username && <p>{errors.username}</p>} */}
         </div>
         </UserName>
         <Contact>
@@ -61,7 +61,7 @@ const FormSignup = (props) => {
             type='number'
             name='number'
             placeholder='Enter your number'
-            value={values.email}
+            value={values.number}
             onChange={handleChange}
            
           />
@@ -79,7 +79,7 @@ const FormSignup = (props) => {
             value={values.password}
             onChange={handleChange}
           />
-          {errors.password && <p>{errors.password}</p>}
+          {/* {errors.password && <p>{errors.password}</p>} */}
         </PasswordComp>
         <ConfirmPs>
       
@@ -91,7 +91,7 @@ const FormSignup = (props) => {
             value={values.password2}
             onChange={handleChange}
           />
-          {errors.password2 && <p>{errors.password2}</p>}
+          {/* {errors.password2 && <p>{errors.password2}</p>} */}
         </ConfirmPs>
           <Location>
         <div className='form-inputs'>
@@ -99,24 +99,24 @@ const FormSignup = (props) => {
           <input
             className='form-input'
             type='text'
-            name='City'
+            name='region'
             placeholder='  REGION'
-            value={values.username}
+            value={values.region}
             onChange={handleChange}
           />
-          {errors.username && <p>{errors.username}</p>}
+          {/* {errors.username && <p>{errors.username}</p>} */}
         </div>
         <div className='form-inputs'>
          
           <input
             className='form-input'
             type='text'
-            name='lastname'
+            name='city'
             placeholder='  CITY'
-            value={values.username}
+            value={values.city}
             onChange={handleChange}
           />
-          {errors.username && <p>{errors.username}</p>}
+          {/* {errors.username && <p>{errors.username}</p>} */}
         </div>
         </Location>
        <Btn>
