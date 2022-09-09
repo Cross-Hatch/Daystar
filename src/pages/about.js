@@ -22,6 +22,7 @@ const AboutPage = () => {
           consectetur adipiscing elit. Nulla lorem ipsum dolor sit amet,
           consectetur adipiscing elit. Nulla lorem ipsum dolor sit amet,
         </p>
+        <button className="contact-button">CONTACT US</button>
       </Wrapper>
     </Layout>
   )
