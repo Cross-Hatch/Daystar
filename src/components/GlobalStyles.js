@@ -50,13 +50,13 @@ body {
   text-rendering: optimizeSpeed;
   line-height: 1.5;
   /* My reset */
-  /* color: ${props => props.theme.light};
-  background-color: ${props => props.theme.dark000}; */
+  color: ${props => props.theme.color};
+  /* background-color: ${props => props.theme.dark000}; */
 }
 /* A elements that don't have a class get default styles */
 a {
   text-decoration: none;
-  /* color: ${props => props.theme.light}; */
+  color: ${props => props.theme.color};
 }
 
 * .active-link {
@@ -65,7 +65,7 @@ a {
 
 a:not([class]) {
   text-decoration-skip-ink: auto;
-  /* color: ${props => props.theme.light}; */
+  color: ${props => props.theme.color};
   text-decoration: none;
 }
 /* Make images easier to work with */
