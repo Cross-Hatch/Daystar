@@ -1,4 +1,5 @@
 import { Link } from "gatsby"
+import { StaticImage } from "gatsby-plugin-image"
 import * as React from "react"
 import Layout from "../components/Layout/Layout"
 import {
@@ -7,7 +8,6 @@ import {
   FormContainer,
   WelcomeText,
   LoginText,
-  ProductsImage,
   Form,
   FormInput,
   FormButton,
@@ -21,9 +21,9 @@ const Login = () => {
         <WelcomeBox>
           <WelcomeText>Welcome Back</WelcomeText>
           <LoginText>
-            Login into your Daystar account to make purchases
+            Login into your Daystar <br /> account to make purchases
           </LoginText>
-          <ProductsImage src="../images/productsImage.png" alt="image" />
+          <StaticImage width={270} src="../images/productsImage.png" />
         </WelcomeBox>
         <FormContainer>
           <Form>
