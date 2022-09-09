@@ -3,6 +3,7 @@ import validate from './validateInfo';
 import useForm from './useForm';
 
 import { FormsCont , UserName ,PasswordComp, ConfirmPs,Btn, Contact, Location} from './SignUpPage.styled';
+import { Link } from 'gatsby';
 
 
 const FormSignup = (props) => {
@@ -127,7 +128,7 @@ const FormSignup = (props) => {
         
         </Btn>
         <span className='form-input-login'>
-          Already have an account? Login <a href='#'>here</a>
+          Already have an account? Login <Link to='/login'>here</Link>
         </span>
       </form>
       </FormsCont>
