@@ -19,7 +19,7 @@ const  SignUpPage = () => {
     <Container>
        <ImageView>
           <headerText>
-
+        <h1>So Say Swww</h1>
           </headerText>
        </ImageView>
        <SignUpDetails>

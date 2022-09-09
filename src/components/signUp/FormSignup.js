@@ -1,6 +1,7 @@
 import React from 'react';
 import validate from './validateInfo';
 import useForm from './useForm';
+import { FormsCont , UserName,Email,PasswordComp, ConfirmPs,Btn } from './SignUpPage.styled';
 
 
 const FormSignup = () => {
@@ -10,13 +11,12 @@ const FormSignup = () => {
   );
 
   return (
-    <div className='form-content-right'>
+  
+       <FormsCont>
       <form onSubmit={handleSubmit} className='form' noValidate>
-        <h1>
-         
-        </h1>
+        <UserName>
         <div className='form-inputs'>
-          <label className='form-label'>First Name</label>
+         
           <input
             className='form-input'
             type='text'
@@ -28,7 +28,7 @@ const FormSignup = () => {
           {errors.username && <p>{errors.username}</p>}
         </div>
         <div className='form-inputs'>
-          <label className='form-label'>Last Name</label>
+         
           <input
             className='form-input'
             type='text'
@@ -39,21 +39,25 @@ const FormSignup = () => {
           />
           {errors.username && <p>{errors.username}</p>}
         </div>
-        <div className='form-inputs'>
-          <label className='form-label'>Email</label>
+        </UserName>
+        <Email>
+         
           <input
+          
             className='form-input'
             type='email'
             name='email'
             placeholder='Enter your email'
             value={values.email}
             onChange={handleChange}
+           
           />
           {errors.email && <p>{errors.email}</p>}
-        </div>
-        <div className='form-inputs'>
-          <label className='form-label'>Password</label>
+        </Email>
+        <PasswordComp>
+       
           <input
+          
             className='form-input'
             type='password'
             name='password'
@@ -62,9 +66,9 @@ const FormSignup = () => {
             onChange={handleChange}
           />
           {errors.password && <p>{errors.password}</p>}
-        </div>
-        <div className='form-inputs'>
-          <label className='form-label'>Confirm Password</label>
+        </PasswordComp>
+        <ConfirmPs>
+      
           <input
             className='form-input'
             type='password'
@@ -74,15 +78,20 @@ const FormSignup = () => {
             onChange={handleChange}
           />
           {errors.password2 && <p>{errors.password2}</p>}
-        </div>
-        <button className='form-input-btn' type='submit'>
+        </ConfirmPs>
+       <Btn>
+         <button className='form-input-btn' type='submit'>
           Sign up
+       
         </button>
+        
+        </Btn>
         <span className='form-input-login'>
           Already have an account? Login <a href='#'>here</a>
         </span>
       </form>
-    </div>
+      </FormsCont>
+  
   );
 };
 
