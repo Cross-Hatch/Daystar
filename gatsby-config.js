@@ -80,5 +80,18 @@ module.exports = {
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
+    {
+      resolve:"gatsby-plugin-firebase",
+      options:{
+        credentials:{
+          apiKey: "AIzaSyBlK2GAMl1pn5HHNRr47tP2LcZLeZAqyXo",
+          authDomain: "daystar-b9a30.firebaseapp.com",
+          projectId: "daystar-b9a30",
+          storageBucket: "daystar-b9a30.appspot.com",
+          messagingSenderId: "394586632743",
+          appId: "1:394586632743:web:9079bff162853500aa1402"
+        }
+      }
+    }
   ],
 }
