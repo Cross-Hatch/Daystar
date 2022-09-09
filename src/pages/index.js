@@ -6,7 +6,7 @@ import ImageSlider from "../components/Slider/ImageSlider"
 import { Wrapper, PageWrapper } from "../styles/Index.styles"
 // import ProductCard from "../components/ProductCard/ProductCard.js"
 import { StaticImage } from "gatsby-plugin-image"
-import { SliderData } from "../components/Slider/sliderData"
+import { SliderData } from "../components/Slider/SliderData"
 import { redTheme } from "../components/ThemeProvider"
 
 const IndexPage = () => (
