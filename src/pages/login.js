@@ -28,7 +28,7 @@ const Login = () => {
         <FormContainer>
           <Form>
             <FormInput placeholder="EMAIL OR PHONE" />
-            <FormInput placeholder="PASSWORD" />
+            <FormInput type={"password"} placeholder="PASSWORD" />
             <FormButton>LOGIN</FormButton>
             <SignUpText>
               Don't have an account?{" "}
