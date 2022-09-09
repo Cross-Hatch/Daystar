@@ -1,12 +1,55 @@
-import * as React from "react";
+import { graphql } from 'gatsby';
+import React from 'react'
 import Layout from "../components/Layout/Layout";
+import { Container, ImageView ,Details,SignUpDetails} from '../components/signUp/SignUpPage.styled'
 
-const SignupPage = () => {
-    return ( 
-        <Layout>
-            Signup
-        </Layout>
-     );
-}
+import Form from '../components/signUp/Form';
+
+
+// import { GatsbyImage, getImage } from "gatsby-plugin-image";
+
+
+const  SignUpPage = () => {
  
-export default SignupPage;
+ //const image = getImage(data.file.childImageSharp.gatsbyImageData) 
+
+  return (
+    <Layout>
+      
+    <Container>
+       <ImageView>
+          <headerText>
+
+          </headerText>
+       </ImageView>
+       <SignUpDetails>
+        <Details>
+           <Form/>
+        </Details>
+       
+  </SignUpDetails> </Container>
+    </Layout>
+  )
+}
+
+
+
+
+
+
+export default SignUpPage
+
+
+ export const query = graphql`
+query Banner {
+  file(relativePath: {eq: "SignUpImage.png"}) {
+    childImageSharp {
+      gatsbyImageData(
+        layout: FULL_WIDTH
+        placeholder: BLURRED
+        formats: [AUTO, WEBP]
+        )
+    }
+  }
+}
+`
