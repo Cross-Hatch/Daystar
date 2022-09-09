@@ -1,6 +1,7 @@
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import * as React from "react"
+import {useState} from "react"
 import Layout from "../components/Layout/Layout"
 import {
   Container,
@@ -13,8 +14,31 @@ import {
   FormButton,
   SignUpText,
 } from "../components/Login/Login.style"
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import app from "../context/firebase"
+
+
+
 
 const Login = () => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const auth = getAuth(app);
+
+  const loginuser = ()=>{
+    signInWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+    // Signed in 
+    const user = userCredential.user;
+    // ...
+    })
+    .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    });
+    setEmail('')
+    setPassword('')
+  }
   return (
     <Layout>
       <Container>
@@ -26,10 +50,12 @@ const Login = () => {
           <StaticImage width={270} src="../images/productsImage.png" />
         </WelcomeBox>
         <FormContainer>
-          <Form>
-            <FormInput placeholder="EMAIL OR PHONE" />
-            <FormInput placeholder="PASSWORD" />
-            <FormButton>LOGIN</FormButton>
+          <Form onSubmit={preventDefault}>
+            <FormInput type="email" placeholder="EMAIL OR PHONE" onChange={(e) => setEmail(e.target.value)} />
+           
+            <FormInput type="password" placeholder="PASSWORD" onChange={(e) => setPassword(e.target.value)}/>
+            
+            <FormButton onClick={loginuser}>LOGIN</FormButton>
             <SignUpText>
               Don't have an account?{" "}
               <b>
@@ -41,6 +67,9 @@ const Login = () => {
       </Container>
     </Layout>
   )
+}
+const preventDefault = email => {
+  email.preventDefault()
 }
 
 export default Login
