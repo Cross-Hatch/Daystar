@@ -8,7 +8,7 @@ const AboutPage = () => {
     <Layout>
       <Wrapper>
         <h1>WHO WE ARE</h1>
-        <div className="text-container">
+        <p className="text-container">
           lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla lorem
           ipsum dolor sit amet, consectetur adipiscing elit. Nulla lorem2000
           ipsum dolor sit amet, consectetur adipiscing elit. Nulla lorem2000
@@ -21,22 +21,7 @@ const AboutPage = () => {
           consectetur adipiscing elit. Nulla lorem2000 ipsum dolor sit amet,
           consectetur adipiscing elit. Nulla lorem ipsum dolor sit amet,
           consectetur adipiscing elit. Nulla lorem ipsum dolor sit amet,
-        </div>
-        <div className="text-container">
-          lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla lorem
-          ipsum dolor sit amet, consectetur adipiscing elit. Nulla lorem2000
-          ipsum dolor sit amet, consectetur adipiscing elit. Nulla lorem2000
-          ipsum dolor sit amet, consectetur adipiscing elit. Nulla lorem ipsum
-          dolor sit amet, consectetur adipiscing elit. Nulla lorem ipsum dolor
-          sit amet, consectetur adipiscing elit. Nulla lorem2000 ipsum dolor sit
-          amet, consectetur adipiscing elit.lorem ipsum dolor sit amet,
-          consectetur adipiscing elit. Nulla lorem ipsum dolor sit amet,
-          consectetur adipiscing elit. Nulla lorem2000 ipsum dolor sit amet,
-          consectetur adipiscing elit. Nulla lorem2000 ipsum dolor sit amet,
-          consectetur adipiscing elit. Nulla lorem ipsum dolor sit amet,
-          consectetur adipiscing elit. Nulla lorem ipsum dolor sit amet,
-        </div>
-        <button className="Contactus-button">CONTACT US</button>
+        </p>
       </Wrapper>
     </Layout>
   )
