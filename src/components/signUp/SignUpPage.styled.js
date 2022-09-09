@@ -21,7 +21,10 @@ box-shadow: 0px 4px 17px 9px rgba(0,0,0,0.28);
 
 export const ImageView = styled.div`
     width: 45%;
-    background-color:red;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+
     
 `
 
@@ -130,6 +133,16 @@ input{
 
 export const  ChangeInnerColor = styled.div`
 background-color:red
+`
+
+export const  HeaderText = styled.div`
+font-weight:bolder;
+text-align:center;
+
+h1{
+    font-size:60px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
 `
 
 export const Btn = styled.div`

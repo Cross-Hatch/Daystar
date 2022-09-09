@@ -1,7 +1,7 @@
 import { graphql } from 'gatsby';
 import React from 'react'
 import Layout from "../components/Layout/Layout";
-import { Container, ImageView ,Details,SignUpDetails} from '../components/signUp/SignUpPage.styled'
+import { Container, ImageView ,Details,SignUpDetails , HeaderText} from '../components/signUp/SignUpPage.styled'
 
 import Form from '../components/signUp/Form';
 
@@ -18,10 +18,14 @@ const  SignUpPage = () => {
       
     <Container>
        <ImageView>
-          <headerText>
+          <HeaderText>
            
-        <h1>So Say Swww</h1>
-          </headerText>
+        <h1>Join The Family</h1>
+        <p>Sign Up and Enjoy Conviniece other <br /> benefits froms Daystar</p>
+  
+   </HeaderText>
+        <img src={`../../SignUpImage.png`}/>
+       
        </ImageView>
        <SignUpDetails>
         <Details>
