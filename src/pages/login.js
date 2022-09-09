@@ -1,3 +1,4 @@
+import { Link } from "gatsby"
 import * as React from "react"
 import Layout from "../components/Layout/Layout"
 import {
@@ -30,7 +31,10 @@ const Login = () => {
             <FormInput placeholder="PASSWORD" />
             <FormButton>LOGIN</FormButton>
             <SignUpText>
-              Don't have an account? <b>Sign up.</b>
+              Don't have an account?{" "}
+              <b>
+                <Link to="/signup">Sign up.</Link>
+              </b>
             </SignUpText>
           </Form>
         </FormContainer>
