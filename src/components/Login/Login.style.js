@@ -65,6 +65,7 @@ export const FormInput = styled.input`
   display: block;
   width: 18em;
   border: none;
+  border-bottom: 1.8px solid ${props => props.theme.bg};
   border-radius: 0.2em;
   background-color: lightgray;
 `
