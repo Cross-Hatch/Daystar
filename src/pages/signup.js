@@ -19,6 +19,7 @@ const  SignUpPage = () => {
     <Container>
        <ImageView>
           <headerText>
+           
         <h1>So Say Swww</h1>
           </headerText>
        </ImageView>
@@ -37,10 +38,9 @@ const  SignUpPage = () => {
 
 
 
-export default SignUpPage
+export default SignUpPage;
 
-
- export const query = graphql`
+export const query = graphql`
 query Banner {
   file(relativePath: {eq: "SignUpImage.png"}) {
     childImageSharp {
@@ -53,3 +53,5 @@ query Banner {
   }
 }
 `
+
+console.log(query)

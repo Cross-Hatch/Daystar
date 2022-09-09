@@ -1,10 +1,12 @@
 import React from 'react';
 import validate from './validateInfo';
 import useForm from './useForm';
-import { FormsCont , UserName,Email,PasswordComp, ConfirmPs,Btn } from './SignUpPage.styled';
+
+import { FormsCont , UserName ,PasswordComp, ConfirmPs,Btn, Contact, Location} from './SignUpPage.styled';
 
 
-const FormSignup = () => {
+const FormSignup = (props) => {
+  console.log(props)
   const { handleChange, handleSubmit, values, errors } = useForm(
    // sendForm,
     validate
@@ -21,7 +23,7 @@ const FormSignup = () => {
             className='form-input'
             type='text'
             name='FirstName'
-            placeholder='Enter your First Name'
+            placeholder=' FIRST NAME'
             value={values.username}
             onChange={handleChange}
           />
@@ -33,27 +35,39 @@ const FormSignup = () => {
             className='form-input'
             type='text'
             name='lastname'
-            placeholder='Enter your username'
+            placeholder=' LAST NAME'
             value={values.username}
             onChange={handleChange}
           />
           {errors.username && <p>{errors.username}</p>}
         </div>
         </UserName>
-        <Email>
-         
+        <Contact>
+        <div>
           <input
-          
             className='form-input'
             type='email'
             name='email'
             placeholder='Enter your email'
             value={values.email}
             onChange={handleChange}
+          />
+          {errors.email && <p>{errors.email}</p>}
+        </div>
+         <div>
+          <input
+          
+            
+            type='number'
+            name='number'
+            placeholder='Enter your number'
+            value={values.email}
+            onChange={handleChange}
            
           />
           {errors.email && <p>{errors.email}</p>}
-        </Email>
+       </div>
+        </Contact>
         <PasswordComp>
        
           <input
@@ -61,7 +75,7 @@ const FormSignup = () => {
             className='form-input'
             type='password'
             name='password'
-            placeholder='Enter your password'
+            placeholder='PASSWORD'
             value={values.password}
             onChange={handleChange}
           />
@@ -73,12 +87,38 @@ const FormSignup = () => {
             className='form-input'
             type='password'
             name='password2'
-            placeholder='Confirm your password'
+            placeholder='CONFIRM PASSWORD'
             value={values.password2}
             onChange={handleChange}
           />
           {errors.password2 && <p>{errors.password2}</p>}
         </ConfirmPs>
+          <Location>
+        <div className='form-inputs'>
+         
+          <input
+            className='form-input'
+            type='text'
+            name='City'
+            placeholder='  REGION'
+            value={values.username}
+            onChange={handleChange}
+          />
+          {errors.username && <p>{errors.username}</p>}
+        </div>
+        <div className='form-inputs'>
+         
+          <input
+            className='form-input'
+            type='text'
+            name='lastname'
+            placeholder='  CITY'
+            value={values.username}
+            onChange={handleChange}
+          />
+          {errors.username && <p>{errors.username}</p>}
+        </div>
+        </Location>
        <Btn>
          <button className='form-input-btn' type='submit'>
           Sign up
@@ -96,3 +136,6 @@ const FormSignup = () => {
 };
 
 export default FormSignup;
+
+
+

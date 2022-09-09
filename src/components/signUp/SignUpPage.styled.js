@@ -74,7 +74,7 @@ input{
 `
 export const  Email = styled.div`
 width: 100%;
-padding:2rem ;
+padding:2rem  ;
 display: flex;
 gap:1rem;
 
@@ -135,6 +135,67 @@ background-color:red
 export const Btn = styled.div`
 display:flex;
 justify-content:center;
+
+
+`
+
+export const Contact = styled.div`
+width: 100%;
+padding:2rem ;
+display: flex;
+gap:1rem;
+
+input{
+    border:none;
+    background-color:#e0dcdc;
+    height:3rem;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight:bolder;
+    border-radius:5px;
+     border-bottom:solid;
+    border-color:yellow;
+}
+
+
+
+`
+
+export const Location = styled.div`
+width: 100%;
+padding:2rem ;
+display: flex;
+gap:1rem;
+
+input{
+    border:none;
+    background-color:#e0dcdc;
+    height:3rem;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight:bolder;
+    border-radius:5px;
+     border-bottom:solid;
+    border-color:yellow;
+}
+
+
+
+`
+
+export const Number = styled.div`
+width: 100%;
+padding:2rem ;
+display: flex;
+
+input{
+    border:none;
+    background-color:#e0dcdc;
+    height:3rem;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight:bolder;
+    border-radius:5px;
+    border-bottom:solid;
+    border-color:yellow;
+}
 
 
 `
