@@ -1,12 +1,12 @@
 import * as React from "react"
-import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import { HeaderContainer, LogoImg } from "./Header.style"
 import useHeaderQuery from "../../hooks/useHeaderQuery"
 import NavLink from "../NavLink/NavLink"
 import { NavItems } from "./Header.style"
+import { StaticImage } from "gatsby-plugin-image"
 
-const Header = ({ siteTitle }) => {
+const Header = () => {
   const { wpMediaItem } = useHeaderQuery()
 
   return (
@@ -18,7 +18,7 @@ const Header = ({ siteTitle }) => {
             alt={wpMediaItem.altText}
           />
         ) : (
-          siteTitle
+          <StaticImage width={100} src="../../images/daystar.png" />
         )}
       </Link>
       <NavItems>
@@ -41,12 +41,12 @@ const Header = ({ siteTitle }) => {
   )
 }
 
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
+// Header.propTypes = {
+//   siteTitle: PropTypes.string,
+// }
 
-Header.defaultProps = {
-  siteTitle: ``,
-}
+// Header.defaultProps = {
+//   siteTitle: ``,
+// }
 
 export default Header
