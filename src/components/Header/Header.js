@@ -34,6 +34,8 @@ const Header = () => {
         <NavLink to="contact" activeClassName="is-active">
           Contact
         </NavLink>
+       
+       
       </NavItems>
     </HeaderContainer>
   )
